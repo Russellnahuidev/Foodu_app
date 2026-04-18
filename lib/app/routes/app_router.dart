@@ -1,0 +1,39 @@
+import 'package:flutter/material.dart';
+import 'package:foodu_app/app/routes/routes_names.dart';
+import 'package:foodu_app/features/auth/presentation/pages/sign_in_page.dart';
+import 'package:foodu_app/features/onboarding/presentation/pages/onboarding_page.dart';
+import 'package:foodu_app/features/onboarding/presentation/pages/welcome_page.dart';
+import 'package:foodu_app/features/splash/presentation/pages/splash_page.dart';
+import 'package:go_router/go_router.dart';
+
+class AppRouter {
+  AppRouter._();
+
+  static final _rootNavigatorKey = GlobalKey<NavigatorState>();
+
+  static final GoRouter router = GoRouter(
+    navigatorKey: _rootNavigatorKey,
+    initialLocation: RoutesNames.splash,
+    routes: [
+      GoRoute(
+        path: RoutesNames.splash,
+        builder: (context, state) => SplashPage(),
+      ),
+      GoRoute(
+        path: RoutesNames.welcome,
+        builder: (context, state) => WelcomePage(),
+      ),
+      GoRoute(
+        path: RoutesNames.onboarding,
+        builder: (context, state) => OnboardingPage(),
+      ),
+      GoRoute(
+        path: RoutesNames.signIn,
+        builder: (context, state) => SignInPage(),
+      ),
+    ],
+    errorBuilder: (context, state) => Scaffold(
+      body: Center(child: Text('Ruta no encontrada: ${state.error}')),
+    ),
+  );
+}
