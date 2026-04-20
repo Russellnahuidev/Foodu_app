@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodu_app/app/constants/dimensions.dart';
 import 'package:foodu_app/app/themes/app_colors.dart';
-import 'package:foodu_app/app/themes/text_styles.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String label;
@@ -27,6 +26,8 @@ class PrimaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+
     return SizedBox(
       width: isFullWidth ? double.infinity : null,
       height: height,
@@ -56,10 +57,24 @@ class PrimaryButton extends StatelessWidget {
                 children: [
                   icon!,
                   const SizedBox(width: AppDimensions.spaceSM),
-                  Text(label, style: AppTextStyles.buttonLarge),
+                  Flexible(
+                    child: Text(
+                      label,
+                      overflow: TextOverflow.ellipsis,
+                      style: textTheme.labelLarge?.copyWith(
+                        color: textColor ?? AppColors.white,
+                      ),
+                    ),
+                  ),
                 ],
               )
-            : Text(label, style: AppTextStyles.buttonLarge),
+            : Text(
+                label,
+                overflow: TextOverflow.ellipsis,
+                style: textTheme.labelLarge?.copyWith(
+                  color: textColor ?? AppColors.white,
+                ),
+              ),
       ),
     );
   }

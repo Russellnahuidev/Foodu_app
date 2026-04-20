@@ -3,7 +3,7 @@ import 'package:foodu_app/app/constants/dimensions.dart';
 import 'package:foodu_app/app/constants/strings.dart';
 import 'package:foodu_app/app/themes/text_styles.dart';
 import 'package:foodu_app/core/storage/local_storage.dart';
-import 'package:foodu_app/features/auth/presentation/pages/sign_in_page.dart';
+import 'package:foodu_app/features/auth/presentation/pages/lets_you_in_page.dart';
 import 'package:foodu_app/features/onboarding/presentation/pages/onboarding_page.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -21,7 +21,7 @@ class _WelcomePageState extends State<WelcomePage> {
   }
 
   Future<void> _navigateToOnboarding() async {
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 2));
 
     final storage = LocalStorage();
 
@@ -30,10 +30,10 @@ class _WelcomePageState extends State<WelcomePage> {
     if (!mounted) return;
 
     if (hasSeen) {
-      /// Ir a Login
+      /// Ir a LetsYouIn
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => const SignInPage()),
+        MaterialPageRoute(builder: (_) => const LetsYouInPage()),
       );
     } else {
       /// Mostrar Onboarding
@@ -80,7 +80,7 @@ class _WelcomePageState extends State<WelcomePage> {
                   Text(
                     AppStrings.welcomeTitle,
                     textAlign: TextAlign.center,
-                    style: AppTextStyles.headlineLarge.copyWith(
+                    style: AppTextStyles.headlineExtraLarge.copyWith(
                       color: Theme.of(context).colorScheme.primary,
                       fontWeight: FontWeight.w800,
                     ),

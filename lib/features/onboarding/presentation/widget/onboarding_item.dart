@@ -11,6 +11,9 @@ class OnboardingItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //final textTheme = Theme.of(context).textTheme;
+    //final colorScheme = Theme.of(context).colorScheme;
+
     return Stack(
       children: [
         OnboardingBackground(),
@@ -22,16 +25,16 @@ class OnboardingItem extends StatelessWidget {
             children: [
               SizedBox(height: AppDimensions.spaceXXXL),
 
-              // Image
+              // Imagen
               Expanded(child: Image.asset(item.image, fit: BoxFit.contain)),
 
               SizedBox(height: AppDimensions.spaceXL),
 
-              // Title
+              // Titulo
               Text(
                 item.title,
                 textAlign: TextAlign.center,
-                style: AppTextStyles.headlineLarge.copyWith(
+                style: AppTextStyles.headlineExtraLarge.copyWith(
                   color: Theme.of(context).colorScheme.primary,
                   fontWeight: FontWeight.w700,
                 ),
@@ -43,7 +46,7 @@ class OnboardingItem extends StatelessWidget {
               Text(
                 item.description,
                 textAlign: TextAlign.center,
-                style: AppTextStyles.bodyMedium.copyWith(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: Theme.of(context).colorScheme.onSurface,
                   height: 1.5,
                 ),

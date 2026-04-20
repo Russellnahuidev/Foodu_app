@@ -27,6 +27,11 @@ class AppTextStyles {
   );
 
   // Headline Styles
+  static const TextStyle headlineExtraLarge = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 40,
+    fontWeight: FontWeight.w700,
+  );
   static const TextStyle headlineLarge = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 32,

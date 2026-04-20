@@ -1,32 +1,33 @@
 class AppStrings {
   AppStrings._();
 
+  // Splash
   static const String appName = 'Foodu';
   static const String welcomeTitle = '¡Bienvenido a Foodu!';
   static const String appTagline =
-      'Ordene comida entregada rápidamente a su puerta con Foodu App Delivery';
+      'Descubre los mejores sabores de la ciudad en un solo lugar.Tu próxima comida favorita está a solo un click de distancia a tu puerta con Foodu App Delivery';
 
   // Onboarding
-  static const String onboardingTitle1 = 'Bienvenido a Foodu App Delivery';
-  static const String onboardingTitle2 = 'Pago Fácil y Seguro';
+  static const String onboardingTitle1 = 'Ordenar comida';
+  static const String onboardingTitle2 = 'Pago Fácil';
   static const String onboardingTitle3 = 'Entrega rápida';
   static const String onboardingDesc1 =
-      'Ordene comida de sus restaurantes favoritos con solo unos pocos toques.';
+      'Explora cientos de restaurantes y menús exclusivos. Filtra por antojo, precio o cercanía y personaliza tu pedido como a tí te gusta.';
   static const String onboardingDesc2 =
-      'Descubre una gran selección de platos deliciosos de diferentes cocinas.';
+      'Olvídate de las complicaciones. Registra tus tarjetas, paga con billeteras digitales o en efectivo de forma segura y rápida.';
   static const String onboardingDesc3 =
-      'Nuestro equipo de entrega se asegurará de que su comida llegue a tiempo y caliente.';
+      'Sigue tu pedido en tiempo real desde la cocina hasta tu puerta. Recibe tu comida caliente y lista para disfrutar en tiempo récord.';
   static const String onboardingSkip = 'Saltar';
   static const String onboardingNext = 'Siguiente';
-  static const String onboardingGetStarted = 'Empesar a usar';
-  static const String onboardingLogin = 'Iniciar sesión';
-  static const String onboardingRegister = 'Registrarse';
-  static const String onboardingLoginOrRegister =
-      'Iniciar sesión o registrarse';
-  static const String onboardingLoginOrRegisterDesc =
-      'Inicia sesión para acceder a tu cuenta o regístrate para crear una nueva cuenta y comenzar a ordenar comida deliciosa.';
-  static const String onboardingLoginOrRegisterButton =
-      'Iniciar sesión o registrarse';
+  static const String onboardingGetStarted = 'Empezar a usar';
+
+  // Lets You In
+  static const String letsYouInTitle = '¡Esta app te deja entrar con!';
+  static const String continueWithFacebook = 'Continuar con Facebook';
+  static const String continueWithGoogle = 'Continuar con Google';
+  static const String continueWithApple = 'Continuar con Apple';
+  static const String or = 'o';
+  static const String continueWithNumber = 'Continuar con número de teléfono';
 
   // Auth
   static const String signInTitle = 'Iniciar sesión';
@@ -47,6 +48,7 @@ class AppStrings {
   static const String orContinueWith = 'O continuar con';
   static const String alreadyHaveAnAccount = '¿Ya tienes una cuenta?';
   static const String dontHaveAnAccount = '¿No tienes una cuenta?';
+  static const String signUp = 'Registrarse';
   static const String signInButton = 'Iniciar sesión';
   static const String signUpButton = 'Registrarse';
   static const String resetPasswordButton = 'Restablecer contraseña';

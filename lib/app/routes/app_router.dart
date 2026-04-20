@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodu_app/app/routes/routes_names.dart';
+import 'package:foodu_app/features/auth/presentation/pages/lets_you_in_page.dart';
 import 'package:foodu_app/features/auth/presentation/pages/sign_in_page.dart';
 import 'package:foodu_app/features/onboarding/presentation/pages/onboarding_page.dart';
 import 'package:foodu_app/features/onboarding/presentation/pages/welcome_page.dart';
@@ -26,6 +27,10 @@ class AppRouter {
       GoRoute(
         path: RoutesNames.onboarding,
         builder: (context, state) => OnboardingPage(),
+      ),
+      GoRoute(
+        path: RoutesNames.letsYouIn,
+        builder: (context, state) => LetsYouInPage(),
       ),
       GoRoute(
         path: RoutesNames.signIn,

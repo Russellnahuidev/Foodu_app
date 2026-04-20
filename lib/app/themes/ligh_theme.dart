@@ -9,7 +9,7 @@ class LightTheme {
     useMaterial3: true,
     brightness: Brightness.light,
     fontFamily: 'Poppins',
-    colorScheme: const ColorScheme.light(
+    colorScheme: ColorScheme.light(
       primary: AppColors.primary,
       secondary: AppColors.secondary,
       error: AppColors.error,
@@ -20,7 +20,7 @@ class LightTheme {
       onSurface: AppColors.textPrimary,
     ),
     scaffoldBackgroundColor: AppColors.scaffoldLight,
-    appBarTheme: const AppBarTheme(
+    appBarTheme: AppBarTheme(
       backgroundColor: AppColors.white,
       foregroundColor: AppColors.textPrimary,
       elevation: 0,
@@ -34,7 +34,7 @@ class LightTheme {
         backgroundColor: AppColors.primary,
         foregroundColor: AppColors.white,
         elevation: 0,
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
         textStyle: AppTextStyles.buttonLarge,
       ),
@@ -42,8 +42,8 @@ class LightTheme {
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         foregroundColor: AppColors.primary,
-        side: const BorderSide(color: AppColors.primary, width: 1.5),
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        side: BorderSide(color: AppColors.primary, width: 1.5),
+        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
         textStyle: AppTextStyles.buttonLarge,
       ),
@@ -57,7 +57,7 @@ class LightTheme {
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: AppColors.grey100,
-      contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       hintStyle: AppTextStyles.inputHint,
       labelStyle: AppTextStyles.inputLabel,
       border: OutlineInputBorder(
@@ -66,22 +66,22 @@ class LightTheme {
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(color: AppColors.borderLight, width: 1),
+        borderSide: BorderSide(color: AppColors.borderLight, width: 1),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(color: AppColors.primary, width: 1.5),
+        borderSide: BorderSide(color: AppColors.primary, width: 1.5),
       ),
       errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(color: AppColors.error, width: 1),
+        borderSide: BorderSide(color: AppColors.error, width: 1),
       ),
       focusedErrorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(color: AppColors.error, width: 1.5),
+        borderSide: BorderSide(color: AppColors.error, width: 1.5),
       ),
     ),
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: AppColors.white,
       selectedItemColor: AppColors.primary,
       unselectedItemColor: AppColors.grey400,
@@ -93,11 +93,11 @@ class LightTheme {
       backgroundColor: AppColors.grey100,
       selectedColor: AppColors.primary50,
       labelStyle: AppTextStyles.chipText,
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-      side: const BorderSide(color: AppColors.primary),
+      side: BorderSide(color: AppColors.primary),
     ),
-    dividerTheme: const DividerThemeData(
+    dividerTheme: DividerThemeData(
       color: AppColors.grey100,
       thickness: 1,
       space: 0,
@@ -108,7 +108,7 @@ class LightTheme {
         return AppColors.transparent;
       }),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-      side: const BorderSide(color: AppColors.grey400),
+      side: BorderSide(color: AppColors.grey400),
     ),
     switchTheme: SwitchThemeData(
       thumbColor: WidgetStateProperty.resolveWith((states) {
@@ -120,7 +120,7 @@ class LightTheme {
         return AppColors.grey200;
       }),
     ),
-    textTheme: const TextTheme(
+    textTheme: TextTheme(
       displayLarge: AppTextStyles.displayLarge,
       displayMedium: AppTextStyles.displayMedium,
       displaySmall: AppTextStyles.displaySmall,

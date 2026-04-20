@@ -9,6 +9,7 @@ class RouteMiddleware {
   static final _publicRoutes = [
     RoutesNames.splash,
     RoutesNames.onboarding,
+    RoutesNames.letsYouIn,
     RoutesNames.signIn,
     RoutesNames.signUp,
   ];
