@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodu_app/app/constants/dimensions.dart';
 import 'package:foodu_app/app/themes/app_colors.dart';
 
 class SocialButton extends StatelessWidget {
@@ -9,6 +10,8 @@ class SocialButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(12),
@@ -16,8 +19,11 @@ class SocialButton extends StatelessWidget {
         height: 56,
         width: 80,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: AppColors.grey100),
+          color: isDark ? AppColors.grey900 : AppColors.transparent,
+          borderRadius: BorderRadius.circular(AppDimensions.borderRadius),
+          border: Border.all(
+            color: isDark ? AppColors.grey800 : AppColors.grey300,
+          ),
         ),
         child: Center(child: Image.asset(imagePath, height: 24)),
       ),

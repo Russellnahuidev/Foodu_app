@@ -23,18 +23,12 @@ class AppStrings {
 
   // Lets You In
   static const String letsYouInTitle = '¡Esta app te deja entrar con!';
-  static const String continueWithFacebook = 'Continuar con Facebook';
-  static const String continueWithGoogle = 'Continuar con Google';
-  static const String continueWithApple = 'Continuar con Apple';
-  static const String or = 'o';
   static const String continueWithNumber = 'Continuar con número de teléfono';
 
   // Auth
   static const String signInTitle = 'Iniciar sesión';
-  static const String signUpTitle = 'Registrarse';
+  static const String signUpTitle = 'Crear Nueva Cuenta';
   static const String signOutTitle = 'Cerrar sesión';
-  static const String forgotPasswordTitle = 'Has olvidado tu contraseña?';
-  static const String resetPasswordTitle = 'Restablecer contraseña';
   static const String emailLabel = 'Correo electrónico';
   static const String emailHint = 'Ingrese su correo electrónico';
   static const String passwordLabel = 'Contraseña';
@@ -45,13 +39,13 @@ class AppStrings {
   static const String nameHint = 'Ingrese su nombre';
   static const String phoneLabel = 'Número de teléfono';
   static const String phoneHint = 'Ingrese su número de teléfono';
+  static const String or = 'o';
   static const String orContinueWith = 'O continuar con';
   static const String alreadyHaveAnAccount = '¿Ya tienes una cuenta?';
   static const String dontHaveAnAccount = '¿No tienes una cuenta?';
-  static const String signUp = 'Registrarse';
   static const String signInButton = 'Iniciar sesión';
   static const String signUpButton = 'Registrarse';
-  static const String resetPasswordButton = 'Restablecer contraseña';
+  static const String rememberMe = 'Recordar sesión';
   static const String signOutButton = 'Cerrar sesión';
   static const String googleLoginButton = 'Iniciar sesión con Google';
   static const String facebookLoginButton = 'Iniciar sesión con Facebook';

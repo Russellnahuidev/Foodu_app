@@ -21,7 +21,7 @@ class LightTheme {
     ),
     scaffoldBackgroundColor: AppColors.scaffoldLight,
     appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.white,
+      backgroundColor: AppColors.backgroundLight,
       foregroundColor: AppColors.textPrimary,
       elevation: 0,
       centerTitle: true,

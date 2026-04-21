@@ -79,11 +79,12 @@ class AppColors {
   static const Color grey900 = Color(0xFF212121);
 
   // Background Colors
-  static const Color backgroundLight = Color(0xFFFFFFFF);
+  static const Color backgroundLight = Colors.white;
   static const Color backgroundDark = Color(0xFF121212);
   static const Color surfaceLight = Color(0xFFFFFFFF);
   static const Color surfaceDark = Color(0xFF1E1E1E);
-  static const Color scaffoldLight = Color(0xFFF5F5F5);
+  static const Color scaffoldDark = Color(0xFF121212);
+  static const Color scaffoldLight = Colors.white;
 
   // Text Colors
   static const Color textPrimary = Color(0xFF212121);

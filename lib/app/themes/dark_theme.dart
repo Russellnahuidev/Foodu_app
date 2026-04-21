@@ -19,14 +19,15 @@ class DarkTheme {
       onError: AppColors.white,
       onSurface: AppColors.white,
     ),
-    scaffoldBackgroundColor: AppColors.backgroundDark,
+    scaffoldBackgroundColor: AppColors.scaffoldDark,
     appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.surfaceDark,
+      backgroundColor: AppColors.backgroundDark,
       foregroundColor: AppColors.white,
       elevation: 0,
       centerTitle: true,
       titleTextStyle: AppTextStyles.titleMedium,
       iconTheme: IconThemeData(color: AppColors.white),
+      surfaceTintColor: Colors.transparent,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(

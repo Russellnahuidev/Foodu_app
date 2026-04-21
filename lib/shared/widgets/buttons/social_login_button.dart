@@ -29,7 +29,7 @@ class SocialLoginButton extends StatelessWidget {
 
         decoration: BoxDecoration(
           color: isDark ? AppColors.grey900 : AppColors.transparent,
-          borderRadius: BorderRadius.circular(AppDimensions.borderRadiusLG),
+          borderRadius: BorderRadius.circular(AppDimensions.borderRadius),
           border: Border.all(
             color: isDark ? AppColors.grey800 : AppColors.grey300,
           ),

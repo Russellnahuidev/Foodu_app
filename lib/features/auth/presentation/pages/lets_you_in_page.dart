@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:foodu_app/app/constants/dimensions.dart';
 import 'package:foodu_app/app/constants/strings.dart';
+import 'package:foodu_app/app/routes/routes_names.dart';
 import 'package:foodu_app/app/themes/app_colors.dart';
 import 'package:foodu_app/app/themes/text_styles.dart';
+import 'package:go_router/go_router.dart';
+import 'package:foodu_app/features/auth/presentation/widgets/or_divider.dart';
 import 'package:foodu_app/shared/widgets/buttons/primary_button.dart';
 import 'package:foodu_app/shared/widgets/buttons/social_login_button.dart';
 
@@ -17,15 +20,16 @@ class LetsYouInPage extends StatelessWidget {
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(AppDimensions.cardPadding),
+          padding: EdgeInsets.all(AppDimensions.space),
           child: Column(
             children: [
               // Imagen superior
-              Expanded(
-                flex: 4,
+              SizedBox(
                 child: Center(
                   child: Image.asset(
                     "assets/images/lets_you_in.png",
+                    width: 400,
+                    height: 400,
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -41,8 +45,8 @@ class LetsYouInPage extends StatelessWidget {
 
               // Botón Facebook
               SocialLoginButton(
-                text: AppStrings.continueWithFacebook,
-                iconPath: "assets/images/facebook.png",
+                text: AppStrings.facebookLoginButton,
+                iconPath: 'assets/images/facebook.png',
                 onTap: () {},
               ),
 
@@ -50,8 +54,8 @@ class LetsYouInPage extends StatelessWidget {
 
               // Botón Google
               SocialLoginButton(
-                text: AppStrings.continueWithGoogle,
-                iconPath: "assets/images/google.png",
+                text: AppStrings.googleLoginButton,
+                iconPath: 'assets/images/google.png',
                 onTap: () {},
               ),
 
@@ -59,38 +63,17 @@ class LetsYouInPage extends StatelessWidget {
 
               // Botón Apple
               SocialLoginButton(
-                text: AppStrings.continueWithApple,
+                text: AppStrings.appleLoginButton,
                 iconPath: isDark
-                    ? "assets/images/apple_dark.png"
-                    : "assets/images/apple.png",
+                    ? 'assets/images/apple_dark.png'
+                    : 'assets/images/apple.png',
                 onTap: () {},
               ),
 
               SizedBox(height: AppDimensions.space),
 
-              // Divider OR
-              Row(
-                children: [
-                  Expanded(
-                    child: Divider(
-                      color: isDark ? AppColors.grey800 : AppColors.grey300,
-                    ),
-                  ),
-
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: AppDimensions.space,
-                    ),
-                    child: Text(AppStrings.or, style: AppTextStyles.bodyMedium),
-                  ),
-
-                  Expanded(
-                    child: Divider(
-                      color: isDark ? AppColors.grey800 : AppColors.grey300,
-                    ),
-                  ),
-                ],
-              ),
+              // Divivion O
+              OrDivider(text: AppStrings.or),
 
               SizedBox(height: AppDimensions.space),
 
@@ -104,7 +87,7 @@ class LetsYouInPage extends StatelessWidget {
 
               SizedBox(height: AppDimensions.space),
 
-              // texto si no tienes cuente y boton de registro
+              // texto si no tienes cuenta y boton de registro
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -117,13 +100,13 @@ class LetsYouInPage extends StatelessWidget {
 
                   TextButton(
                     onPressed: () {
-                      // Luego navegaremos a Sign Up
+                      context.push(RoutesNames.signUp);
                     },
                     style: TextButton.styleFrom(
                       foregroundColor: AppColors.primary,
                       textStyle: Theme.of(context).textTheme.labelLarge,
                     ),
-                    child: Text(AppStrings.signUp),
+                    child: Text(AppStrings.signUpButton),
                   ),
                 ],
               ),
