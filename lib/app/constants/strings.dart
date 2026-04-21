@@ -26,7 +26,7 @@ class AppStrings {
   static const String continueWithNumber = 'Continuar con número de teléfono';
 
   // Auth
-  static const String signInTitle = 'Iniciar sesión';
+  static const String signInTitle = 'Acceder a tu cuenta';
   static const String signUpTitle = 'Crear Nueva Cuenta';
   static const String signOutTitle = 'Cerrar sesión';
   static const String emailLabel = 'Correo electrónico';

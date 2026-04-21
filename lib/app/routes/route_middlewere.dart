@@ -12,6 +12,7 @@ class RouteMiddleware {
     RoutesNames.letsYouIn,
     RoutesNames.signIn,
     RoutesNames.signUp,
+    RoutesNames.otpVerification,
   ];
 
   static Future<String?> guard(_, GoRouterState state) async {
