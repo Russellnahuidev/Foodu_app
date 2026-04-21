@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:foodu_app/app/constants/dimensions.dart';
 import 'package:foodu_app/app/constants/strings.dart';
+import 'package:foodu_app/app/routes/routes_names.dart';
+import 'package:foodu_app/app/themes/app_colors.dart';
 import 'package:foodu_app/app/themes/text_styles.dart';
 import 'package:foodu_app/core/storage/local_storage.dart';
-import 'package:foodu_app/features/auth/presentation/pages/lets_you_in_page.dart';
-import 'package:foodu_app/features/onboarding/presentation/pages/onboarding_page.dart';
+import 'package:go_router/go_router.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -30,17 +31,11 @@ class _WelcomePageState extends State<WelcomePage> {
     if (!mounted) return;
 
     if (hasSeen) {
-      /// Ir a LetsYouIn
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (_) => const LetsYouInPage()),
-      );
+      // Ir a LetsYouIn
+      context.go(RoutesNames.letsYouIn);
     } else {
-      /// Mostrar Onboarding
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (_) => const OnboardingPage()),
-      );
+      // Mostrar Onboarding
+      context.go(RoutesNames.onboarding);
     }
   }
 
@@ -93,9 +88,7 @@ class _WelcomePageState extends State<WelcomePage> {
                     AppStrings.appTagline,
                     textAlign: TextAlign.center,
                     style: AppTextStyles.bodyLarge.copyWith(
-                      color: Theme.of(
-                        context,
-                      ).colorScheme.onSurface.withOpacity(0.9),
+                      color: AppColors.white.withOpacity(0.9),
                       height: 1.4,
                     ),
                   ),
