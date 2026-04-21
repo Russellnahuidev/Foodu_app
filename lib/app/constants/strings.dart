@@ -26,9 +26,10 @@ class AppStrings {
   static const String continueWithNumber = 'Continuar con número de teléfono';
 
   // Auth
-  static const String signInTitle = 'Iniciar sesión';
+  static const String signInTitle = 'Acceder a tu cuenta';
   static const String signUpTitle = 'Crear Nueva Cuenta';
   static const String signOutTitle = 'Cerrar sesión';
+  static const String otpVerificationTitle = 'Verificación del código OTP';
   static const String emailLabel = 'Correo electrónico';
   static const String emailHint = 'Ingrese su correo electrónico';
   static const String passwordLabel = 'Contraseña';
@@ -39,12 +40,18 @@ class AppStrings {
   static const String nameHint = 'Ingrese su nombre';
   static const String phoneLabel = 'Número de teléfono';
   static const String phoneHint = 'Ingrese su número de teléfono';
+  static const String otpCodeLabel = 'Código OTP';
+  static const String otpCodeHint = 'El código ha sido enviado a';
+  static const String resendCode = 'Reenviar código';
+  static const String resendCodeIn = 'Reenviar código en ';
+  static const String resendCodeInSeconds = ' segundos';
   static const String or = 'o';
   static const String orContinueWith = 'O continuar con';
   static const String alreadyHaveAnAccount = '¿Ya tienes una cuenta?';
   static const String dontHaveAnAccount = '¿No tienes una cuenta?';
   static const String signInButton = 'Iniciar sesión';
   static const String signUpButton = 'Registrarse';
+  static const String otpVerificationButton = 'Verificar';
   static const String rememberMe = 'Recordar sesión';
   static const String signOutButton = 'Cerrar sesión';
   static const String googleLoginButton = 'Iniciar sesión con Google';

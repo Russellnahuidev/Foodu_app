@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:foodu_app/app/routes/routes_names.dart';
+import 'package:foodu_app/features/account_setup/presentation/pages/fill_profile_page.dart';
 import 'package:foodu_app/features/auth/presentation/pages/lets_you_in_page.dart';
+import 'package:foodu_app/features/auth/presentation/pages/otp_verification_page.dart';
 import 'package:foodu_app/features/auth/presentation/pages/sign_in_page.dart';
 import 'package:foodu_app/features/auth/presentation/pages/sign_up_page.dart';
 import 'package:foodu_app/features/onboarding/presentation/pages/onboarding_page.dart';
@@ -40,6 +42,14 @@ class AppRouter {
       GoRoute(
         path: RoutesNames.signUp,
         builder: (context, state) => SignUpPage(),
+      ),
+      GoRoute(
+        path: RoutesNames.otpVerification,
+        builder: (context, state) => OtpVerificationPage(),
+      ),
+      GoRoute(
+        path: RoutesNames.fillProfile,
+        builder: (context, state) => FillProfilePage(),
       ),
     ],
     errorBuilder: (context, state) => Scaffold(

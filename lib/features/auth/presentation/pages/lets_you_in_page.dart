@@ -82,6 +82,7 @@ class LetsYouInPage extends StatelessWidget {
                 label: AppStrings.continueWithNumber,
                 onPressed: () {
                   // Luego navegaremos a Login
+                  context.push(RoutesNames.signIn);
                 },
               ),
 
