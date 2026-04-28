@@ -6,8 +6,8 @@ import 'package:foodu_app/app/themes/app_colors.dart';
 import 'package:foodu_app/app/themes/text_styles.dart';
 import 'package:go_router/go_router.dart';
 import 'package:foodu_app/features/auth/presentation/widgets/auth_header_image.dart';
-import 'package:foodu_app/features/auth/presentation/widgets/auth_text_field.dart';
-import 'package:foodu_app/features/auth/presentation/widgets/country_phone_field.dart';
+import 'package:foodu_app/shared/widgets/inputs/app_text_field.dart';
+import 'package:foodu_app/shared/widgets/inputs/app_country_phone_field.dart';
 import 'package:foodu_app/features/auth/presentation/widgets/or_divider.dart';
 import 'package:foodu_app/features/auth/presentation/widgets/remember_me_checkbox.dart';
 import 'package:foodu_app/features/auth/presentation/widgets/social_button.dart';
@@ -65,14 +65,14 @@ class _SignUpPageState extends State<SignUpPage> {
               SizedBox(height: AppDimensions.spaceXXXL),
 
               // Formulario de Telefono
-              CountryPhoneField(controller: phoneController),
+              AppCountryPhoneField(controller: phoneController),
 
               SizedBox(height: AppDimensions.space),
 
               // Formulario de email
-              AuthTextField(
+              AppTextField(
                 hintText: AppStrings.emailHint,
-                icon: Icons.email_rounded,
+                prefixIcon: Icons.email_rounded,
                 controller: emailController,
                 keyboardType: TextInputType.emailAddress,
               ),
@@ -80,9 +80,9 @@ class _SignUpPageState extends State<SignUpPage> {
               SizedBox(height: AppDimensions.space),
 
               // Formulario de nombre
-              AuthTextField(
+              AppTextField(
                 hintText: AppStrings.nameHint,
-                icon: Icons.person_rounded,
+                prefixIcon: Icons.person_rounded,
                 controller: nameController,
               ),
 

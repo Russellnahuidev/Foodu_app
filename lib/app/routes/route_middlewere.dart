@@ -14,6 +14,7 @@ class RouteMiddleware {
     RoutesNames.signUp,
     RoutesNames.otpVerification,
     RoutesNames.fillProfile,
+    RoutesNames.setLocation,
   ];
 
   static Future<String?> guard(_, GoRouterState state) async {
