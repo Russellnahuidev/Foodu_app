@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodu_app/app/routes/routes_names.dart';
+import 'package:foodu_app/features/account_setup/presentation/pages/create_pin_page.dart';
 import 'package:foodu_app/features/account_setup/presentation/pages/fill_profile_page.dart';
 import 'package:foodu_app/features/account_setup/presentation/pages/set_location_page.dart';
 import 'package:foodu_app/features/auth/presentation/pages/lets_you_in_page.dart';
@@ -55,6 +56,10 @@ class AppRouter {
       GoRoute(
         path: RoutesNames.setLocation,
         builder: (context, state) => SetLocationPage(),
+      ),
+      GoRoute(
+        path: RoutesNames.createPin,
+        builder: (context, state) => CreatePinPage(),
       ),
     ],
     errorBuilder: (context, state) => Scaffold(

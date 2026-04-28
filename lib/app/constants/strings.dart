@@ -31,6 +31,9 @@ class AppStrings {
   static const String signOutTitle = 'Cerrar sesión';
   static const String otpVerificationTitle = 'Verificación del código OTP';
   static const String fillProfileTitle = 'Completa tu perfil';
+  static const String setLocationTitle = 'Selecciona tu ubicación';
+  static const String setLocation = 'Ubicación';
+  static const String setLocationHint = 'Seleccione una ubicación en el mapa';
   static const String emailLabel = 'Correo electrónico';
   static const String emailHint = 'Ingrese su correo electrónico';
   static const String passwordLabel = 'Contraseña';

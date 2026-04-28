@@ -10,5 +10,6 @@ class RoutesNames {
   static const String otpVerification = '/otp-verification';
   static const String fillProfile = '/fill-profile';
   static const String setLocation = '/set-location';
+  static const String createPin = '/create-pin';
   static const String home = '/home';
 }
