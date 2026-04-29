@@ -10,6 +10,8 @@ class SecondaryButton extends StatelessWidget {
   final bool isFullWidth;
   final double height;
   final Widget? icon;
+  final Color? backgroundColor;
+  final Color? textColor;
 
   const SecondaryButton({
     super.key,
@@ -19,20 +21,32 @@ class SecondaryButton extends StatelessWidget {
     this.isFullWidth = true,
     this.height = AppDimensions.buttonHeight,
     this.icon,
+    this.backgroundColor,
+    this.textColor,
   });
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return SizedBox(
       width: isFullWidth ? double.infinity : null,
       height: height,
-      child: OutlinedButton(
+      child: ElevatedButton(
         onPressed: isLoading ? null : onPressed,
-        style: OutlinedButton.styleFrom(
-          foregroundColor: AppColors.primary,
-          side: const BorderSide(color: AppColors.primary, width: 1.5),
+        style: ElevatedButton.styleFrom(
+          backgroundColor:
+              backgroundColor ??
+              (isDark
+                  ? AppColors.white.withOpacity(0.1)
+                  : AppColors.primary.withOpacity(0.1)),
+          foregroundColor: textColor ?? AppColors.white,
+          disabledBackgroundColor: AppColors.grey300,
+          elevation: 0,
+          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 20),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppDimensions.borderRadius),
+            borderRadius: BorderRadius.circular(AppDimensions.borderRadiusXXL),
           ),
         ),
         child: isLoading
@@ -40,7 +54,7 @@ class SecondaryButton extends StatelessWidget {
                 width: 22,
                 height: 22,
                 child: CircularProgressIndicator(
-                  color: AppColors.primary,
+                  color: AppColors.white,
                   strokeWidth: 2.5,
                 ),
               )
@@ -49,21 +63,25 @@ class SecondaryButton extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   icon!,
-
-                  SizedBox(width: AppDimensions.spaceSM),
-
-                  Text(
-                    label,
-                    style: AppTextStyles.buttonLarge.copyWith(
-                      color: AppColors.primary,
+                  const SizedBox(width: AppDimensions.spaceSM),
+                  Flexible(
+                    child: Text(
+                      label,
+                      overflow: TextOverflow.ellipsis,
+                      style: textTheme.labelLarge?.copyWith(
+                        color: textColor ?? AppColors.white,
+                      ),
                     ),
                   ),
                 ],
               )
             : Text(
                 label,
-                style: AppTextStyles.buttonLarge.copyWith(
-                  color: AppColors.primary,
+                overflow: TextOverflow.ellipsis,
+                style: textTheme.labelLarge?.copyWith(
+                  color:
+                      textColor ??
+                      (isDark ? AppColors.white : AppColors.primary),
                 ),
               ),
       ),

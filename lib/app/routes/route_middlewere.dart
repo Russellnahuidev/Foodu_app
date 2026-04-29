@@ -17,6 +17,7 @@ class RouteMiddleware {
     RoutesNames.setLocation,
     RoutesNames.createPin,
     RoutesNames.fingerprint,
+    RoutesNames.faceRecognition,
   ];
 
   static Future<String?> guard(_, GoRouterState state) async {

@@ -36,6 +36,7 @@ class AppStrings {
   static const String createPinDescription =
       'Añade un número PIN para que tu cuenta sea más segura.';
   static const String fingerprintTitle = 'Establece tu huella digital';
+  static const String faceRecognitionTitle = 'Identificación facial';
   static const String setLocation = 'Ubicación';
   static const String setLocationHint = 'Seleccione una ubicación en el mapa';
   static const String emailLabel = 'Correo electrónico';
@@ -61,6 +62,10 @@ class AppStrings {
   static const String resendCode = 'Reenviar código';
   static const String resendCodeIn = 'Reenviar código en ';
   static const String resendCodeInSeconds = ' segundos';
+  static const String fingerprintDescription =
+      'Establece tu huella digital para que tu cuenta sea más segura.';
+  static const String fingerprintInstruction =
+      'Por favor, coloca tu huella digital en el escanador de huella digital para comenzar.';
   static const String or = 'o';
   static const String orContinueWith = 'O continuar con';
   static const String alreadyHaveAnAccount = '¿Ya tienes una cuenta?';
@@ -68,6 +73,7 @@ class AppStrings {
   static const String signInButton = 'Iniciar sesión';
   static const String signUpButton = 'Registrarse';
   static const String otpVerificationButton = 'Verificar';
+  static const String skipButton = 'Saltar';
   static const String continueButton = 'Continuar';
   static const String rememberMe = 'Recordar sesión';
   static const String signOutButton = 'Cerrar sesión';

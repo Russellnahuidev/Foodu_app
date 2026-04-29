@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodu_app/app/routes/routes_names.dart';
 import 'package:foodu_app/features/account_setup/presentation/pages/create_pin_page.dart';
+import 'package:foodu_app/features/account_setup/presentation/pages/face_recognition_page.dart';
 import 'package:foodu_app/features/account_setup/presentation/pages/fill_profile_page.dart';
 import 'package:foodu_app/features/account_setup/presentation/pages/fingerprint_page.dart';
 import 'package:foodu_app/features/account_setup/presentation/pages/set_location_page.dart';
@@ -65,6 +66,10 @@ class AppRouter {
       GoRoute(
         path: RoutesNames.fingerprint,
         builder: (context, state) => FingerprintPage(),
+      ),
+      GoRoute(
+        path: RoutesNames.faceRecognition,
+        builder: (context, state) => FaceRecognitionPage(),
       ),
     ],
     errorBuilder: (context, state) => Scaffold(
