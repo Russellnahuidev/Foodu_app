@@ -5,7 +5,7 @@ import 'package:foodu_app/app/constants/dimensions.dart';
 import 'package:foodu_app/app/constants/strings.dart';
 import 'package:foodu_app/app/routes/routes_names.dart';
 import 'package:foodu_app/app/themes/text_styles.dart';
-import 'package:foodu_app/features/auth/presentation/widgets/otp_input_field.dart';
+import 'package:foodu_app/shared/widgets/inputs/otp_digit_field.dart';
 import 'package:foodu_app/shared/widgets/buttons/primary_button.dart';
 import 'package:go_router/go_router.dart';
 
@@ -172,14 +172,14 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  OtpInputField(
+                  OtpDigitField(
                     controller: c1,
                     focusNode: f1,
                     nextFocus: f2,
                     onChanged: verifyIfComplete,
                   ),
 
-                  OtpInputField(
+                  OtpDigitField(
                     controller: c2,
                     focusNode: f2,
                     nextFocus: f3,
@@ -187,7 +187,7 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
                     onChanged: verifyIfComplete,
                   ),
 
-                  OtpInputField(
+                  OtpDigitField(
                     controller: c3,
                     focusNode: f3,
                     nextFocus: f4,
@@ -195,7 +195,7 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
                     onChanged: verifyIfComplete,
                   ),
 
-                  OtpInputField(
+                  OtpDigitField(
                     controller: c4,
                     focusNode: f4,
                     previousFocus: f3,

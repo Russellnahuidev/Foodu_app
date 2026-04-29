@@ -16,6 +16,7 @@ class RouteMiddleware {
     RoutesNames.fillProfile,
     RoutesNames.setLocation,
     RoutesNames.createPin,
+    RoutesNames.fingerprint,
   ];
 
   static Future<String?> guard(_, GoRouterState state) async {

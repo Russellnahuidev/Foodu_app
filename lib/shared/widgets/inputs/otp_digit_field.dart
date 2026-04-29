@@ -2,20 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:foodu_app/app/constants/dimensions.dart';
 import 'package:foodu_app/app/themes/app_colors.dart';
 
-class OtpInputField extends StatelessWidget {
+class OtpDigitField extends StatelessWidget {
   final TextEditingController controller;
   final FocusNode focusNode;
   final FocusNode? nextFocus;
   final FocusNode? previousFocus;
   final VoidCallback? onChanged;
 
-  const OtpInputField({
+  final bool obscureText;
+
+  const OtpDigitField({
     super.key,
     required this.controller,
     required this.focusNode,
     this.nextFocus,
     this.previousFocus,
     this.onChanged,
+    this.obscureText = false,
   });
 
   @override
@@ -29,13 +32,12 @@ class OtpInputField extends StatelessWidget {
       child: TextField(
         controller: controller,
         focusNode: focusNode,
-
         keyboardType: TextInputType.number,
         textAlign: TextAlign.center,
         maxLength: 1,
-
         showCursor: false,
-
+        obscureText: obscureText,
+        obscuringCharacter: '●',
         style: theme.textTheme.titleLarge?.copyWith(
           fontWeight: FontWeight.w700,
           fontSize: 24,

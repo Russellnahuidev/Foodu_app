@@ -32,6 +32,10 @@ class AppStrings {
   static const String otpVerificationTitle = 'Verificación del código OTP';
   static const String fillProfileTitle = 'Completa tu perfil';
   static const String setLocationTitle = 'Selecciona tu ubicación';
+  static const String createPinTitle = 'Crear nuevo PIN';
+  static const String createPinDescription =
+      'Añade un número PIN para que tu cuenta sea más segura.';
+  static const String fingerprintTitle = 'Establece tu huella digital';
   static const String setLocation = 'Ubicación';
   static const String setLocationHint = 'Seleccione una ubicación en el mapa';
   static const String emailLabel = 'Correo electrónico';

@@ -11,5 +11,6 @@ class RoutesNames {
   static const String fillProfile = '/fill-profile';
   static const String setLocation = '/set-location';
   static const String createPin = '/create-pin';
+  static const String fingerprint = '/fingerprint';
   static const String home = '/home';
 }
