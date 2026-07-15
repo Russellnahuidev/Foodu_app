@@ -41,7 +41,7 @@ class _CreatePinPageState extends State<CreatePinPage> {
       appBar: AppBar(
         title: Text(
           AppStrings.createPinTitle,
-          style: Theme.of(context).textTheme.titleLarge,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios_new),

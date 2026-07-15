@@ -13,5 +13,6 @@ class RoutesNames {
   static const String createPin = '/create-pin';
   static const String fingerprint = '/fingerprint';
   static const String faceRecognition = '/face-recognition';
+  static const String faceScanning = '/face-scanning';
   static const String home = '/home';
 }

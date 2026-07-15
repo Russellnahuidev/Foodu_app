@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodu_app/app/constants/dimensions.dart';
 import 'package:foodu_app/app/constants/strings.dart';
+import 'package:foodu_app/app/routes/routes_names.dart';
 import 'package:foodu_app/features/account_setup/presentation/widgets/biometric_icon.dart';
 import 'package:foodu_app/shared/widgets/buttons/primary_button.dart';
 import 'package:foodu_app/shared/widgets/buttons/secondary_button.dart';
@@ -21,7 +22,7 @@ class _FingerprintPageState extends State<FingerprintPage> {
       appBar: AppBar(
         title: Text(
           AppStrings.fingerprintTitle,
-          style: Theme.of(context).textTheme.titleLarge,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios_new),
@@ -75,6 +76,7 @@ class _FingerprintPageState extends State<FingerprintPage> {
                       label: AppStrings.continueButton,
                       onPressed: () {
                         // Navigate to FaceRecognitionPage
+                        context.push(RoutesNames.faceRecognition);
                       },
                     ),
                   ),

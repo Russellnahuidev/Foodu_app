@@ -37,6 +37,7 @@ dependencies:
   flutter_bloc: ^9.1.1
   flutter_map: ^8.3.0
   flutter_secure_storage: ^10.0.0
+  flutter_svg: ^2.3.0
   geocoding: ^3.0.0
   geolocator: ^11.0.0
   get_it: ^9.2.1

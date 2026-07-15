@@ -101,7 +101,7 @@ class _SetLocationPageState extends State<SetLocationPage> {
       appBar: AppBar(
         title: Text(
           AppStrings.setLocationTitle,
-          style: Theme.of(context).textTheme.titleLarge,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios_new),

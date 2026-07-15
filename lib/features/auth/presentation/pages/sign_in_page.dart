@@ -100,23 +100,23 @@ class _SignInPageState extends State<SignInPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SocialButton(
-                    imagePath: 'assets/images/facebook.png',
+                    iconPath: 'assets/icons/facebook_logo.svg',
+                    iconColor: AppColors.facebook,
                     onTap: () {},
                   ),
 
                   SizedBox(width: AppDimensions.space),
 
                   SocialButton(
-                    imagePath: 'assets/images/google.png',
+                    iconPath: 'assets/icons/google_logo.svg',
                     onTap: () {},
                   ),
 
                   SizedBox(width: AppDimensions.space),
 
                   SocialButton(
-                    imagePath: isDark
-                        ? 'assets/images/apple_dark.png'
-                        : 'assets/images/apple.png',
+                    iconPath: 'assets/icons/apple_logo.svg',
+                    iconColor: isDark ? AppColors.white : AppColors.black,
                     onTap: () {},
                   ),
                 ],

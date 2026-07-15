@@ -39,7 +39,7 @@ class _FillProfilePageState extends State<FillProfilePage> {
       appBar: AppBar(
         title: Text(
           AppStrings.fillProfileTitle,
-          style: Theme.of(context).textTheme.titleLarge,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios_new),

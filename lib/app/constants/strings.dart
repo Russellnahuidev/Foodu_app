@@ -37,6 +37,8 @@ class AppStrings {
       'Añade un número PIN para que tu cuenta sea más segura.';
   static const String fingerprintTitle = 'Establece tu huella digital';
   static const String faceRecognitionTitle = 'Identificación facial';
+  static const String faceRecognitionDescription =
+      'Añade el reconocimiento facial para que tu cuenta sea más segura.';
   static const String setLocation = 'Ubicación';
   static const String setLocationHint = 'Seleccione una ubicación en el mapa';
   static const String emailLabel = 'Correo electrónico';
