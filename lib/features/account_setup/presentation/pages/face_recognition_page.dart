@@ -21,62 +21,82 @@ class _FaceRecognitionPageState extends State<FaceRecognitionPage> {
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
+        elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_new),
+          icon: const Icon(Icons.arrow_back_ios_new),
           onPressed: () => context.pop(),
         ),
       ),
       body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(AppDimensions.space),
-          child: Column(
-            children: [
-              // Title
-              Text(
-                AppStrings.faceRecognitionTitle,
-                style: AppTextStyles.headlineLarge,
-              ),
-              SizedBox(height: AppDimensions.space),
-              // Description
-              Text(
-                AppStrings.faceRecognitionDescription,
-                style: Theme.of(context).textTheme.bodyMedium,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: AppDimensions.spaceXL),
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            return SingleChildScrollView(
+              padding: EdgeInsets.symmetric(horizontal: AppDimensions.space),
+              child: ConstrainedBox(
+                constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                child: IntrinsicHeight(
+                  child: Column(
+                    children: [
+                      // Espaciador flexible superior
+                      const Spacer(flex: 1),
 
-              // Face Icon
-              Expanded(child: Center(child: const FaceRecognitionIcon())),
-              SizedBox(height: AppDimensions.spaceXL),
+                      // Title
+                      Text(
+                        AppStrings.faceRecognitionTitle,
+                        style: AppTextStyles.headlineLarge,
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: AppDimensions.space),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  // Skip Button
-                  Expanded(
-                    child: SecondaryButton(
-                      label: AppStrings.skipButton,
-                      onPressed: () {
-                        // Skip biometric
-                      },
-                    ),
+                      // Description
+                      Text(
+                        AppStrings.faceRecognitionDescription,
+                        style: Theme.of(context).textTheme.bodyMedium,
+                        textAlign: TextAlign.center,
+                      ),
+
+                      // Espaciador flexible hacia el icono
+                      const Spacer(flex: 2),
+
+                      // Face Icon
+                      const Center(child: FaceRecognitionIcon()),
+
+                      // Espaciador flexible inferior al icono
+                      const Spacer(flex: 3),
+
+                      // Botones de acción
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          // Skip Button
+                          Expanded(
+                            child: SecondaryButton(
+                              label: AppStrings.skipButton,
+                              onPressed: () {
+                                // Skip biometric
+                              },
+                            ),
+                          ),
+                          SizedBox(width: AppDimensions.spaceMD),
+                          // Continue Button
+                          Expanded(
+                            child: PrimaryButton(
+                              label: AppStrings.continueButton,
+                              onPressed: () {
+                                // Navigate to FaceRecognitionPage
+                                context.push(RoutesNames.faceScanning);
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: AppDimensions.spaceSM),
+                    ],
                   ),
-                  SizedBox(width: AppDimensions.spaceMD),
-                  // Continue Button
-                  Expanded(
-                    child: PrimaryButton(
-                      label: AppStrings.continueButton,
-                      onPressed: () {
-                        // Navigate to FaceRecognitionPage
-                        context.push(RoutesNames.faceScanning);
-                      },
-                    ),
-                  ),
-                ],
+                ),
               ),
-              SizedBox(height: AppDimensions.spaceSM),
-            ],
-          ),
+            );
+          },
         ),
       ),
     );

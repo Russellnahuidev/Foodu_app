@@ -31,7 +31,7 @@ class SocialButton extends StatelessWidget {
           border: Border.all(
             color: isDark
                 ? AppColors.grey800
-                : AppColors.grey300.withOpacity(0.5),
+                : AppColors.grey300.withValues(alpha: 0.5),
             width: 1.0,
           ),
         ),

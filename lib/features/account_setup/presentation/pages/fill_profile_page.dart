@@ -37,97 +37,111 @@ class _FillProfilePageState extends State<FillProfilePage> {
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
         title: Text(
           AppStrings.fillProfileTitle,
-          style: Theme.of(context).textTheme.headlineSmall,
+          style: Theme.of(
+            context,
+          ).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
         ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios_new),
           onPressed: () => context.pop(),
         ),
       ),
-
       body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(AppDimensions.space),
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            return SingleChildScrollView(
+              padding: EdgeInsets.symmetric(horizontal: AppDimensions.space),
+              child: ConstrainedBox(
+                constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                child: IntrinsicHeight(
+                  child: Column(
+                    children: [
+                      SizedBox(height: AppDimensions.space),
 
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                // Avatar
-                ProfileAvatarPicker(
-                  imageFile: _selectedImage,
-                  onTap: _showImageSourceOptions,
+                      // Avatar Picker
+                      ProfileAvatarPicker(
+                        imageFile: _selectedImage,
+                        onTap: _showImageSourceOptions,
+                      ),
+
+                      SizedBox(height: AppDimensions.spaceXL),
+
+                      // Nombre completo
+                      AppTextField(
+                        hintText: AppStrings.nameHint,
+                        controller: fullNameController,
+                      ),
+
+                      SizedBox(height: AppDimensions.space),
+
+                      // Apodo / Alias
+                      AppTextField(
+                        hintText: AppStrings.nicknameHint,
+                        controller: nickNameController,
+                      ),
+
+                      SizedBox(height: AppDimensions.space),
+
+                      // Fecha de nacimiento
+                      AppTextField(
+                        hintText: AppStrings.dobHint,
+                        controller: dobController,
+                        suffixIcon: Icons.calendar_today_outlined,
+                        readOnly: true,
+                        onTap: _selectDate,
+                        onSuffixTap: _selectDate,
+                      ),
+
+                      SizedBox(height: AppDimensions.space),
+
+                      // Correo Electrónico
+                      AppTextField(
+                        hintText: AppStrings.emailHint,
+                        suffixIcon: Icons.email_outlined,
+                        controller: emailController,
+                      ),
+
+                      SizedBox(height: AppDimensions.space),
+
+                      // Teléfono con País
+                      AppCountryPhoneField(controller: phoneController),
+
+                      SizedBox(height: AppDimensions.space),
+
+                      // Género Dropdown
+                      GenderDropdown(
+                        value: gender,
+                        onChanged: (value) {
+                          setState(() {
+                            gender = value;
+                          });
+                        },
+                      ),
+
+                      // Empuja el botón automáticamente hacia el fondo
+                      const Spacer(),
+
+                      SizedBox(height: AppDimensions.space),
+
+                      // Botón continuar fijado abajo
+                      PrimaryButton(
+                        label: AppStrings.continueButton,
+                        onPressed: () {
+                          context.push(RoutesNames.setLocation);
+                        },
+                      ),
+
+                      SizedBox(height: AppDimensions.space),
+                    ],
+                  ),
                 ),
-
-                SizedBox(height: AppDimensions.spaceXL),
-
-                // Nombre
-                AppTextField(
-                  hintText: AppStrings.nameHint,
-                  controller: fullNameController,
-                ),
-
-                SizedBox(height: AppDimensions.space),
-
-                // Alias
-                AppTextField(
-                  hintText: AppStrings.nicknameHint,
-                  controller: nickNameController,
-                ),
-
-                SizedBox(height: AppDimensions.space),
-
-                // Fecha de nacimiento
-                AppTextField(
-                  hintText: AppStrings.dobHint,
-                  controller: dobController,
-                  suffixIcon: Icons.calendar_today_rounded,
-
-                  readOnly: true,
-
-                  onTap: _selectDate,
-                  onSuffixTap: _selectDate,
-                ),
-
-                SizedBox(height: AppDimensions.space),
-
-                // Email
-                AppTextField(
-                  hintText: AppStrings.emailHint,
-                  suffixIcon: Icons.email_rounded,
-                  controller: emailController,
-                ),
-
-                SizedBox(height: AppDimensions.space),
-
-                // Teléfono
-                AppCountryPhoneField(controller: phoneController),
-
-                SizedBox(height: AppDimensions.space),
-
-                /// Gender Dropdown
-                GenderDropdown(
-                  value: gender,
-                  onChanged: (value) {
-                    setState(() {
-                      gender = value;
-                    });
-                  },
-                ),
-                SizedBox(height: AppDimensions.spaceXXXL),
-
-                // Boton continuar
-                PrimaryButton(
-                  label: AppStrings.continueButton,
-                  onPressed: () {
-                    /// Navegar a SetLocationPage
-                    context.push(RoutesNames.setLocation);
-                  },
-                ),
-              ],
-            ),
-          ),
+              ),
+            );
+          },
         ),
       ),
     );

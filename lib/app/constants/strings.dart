@@ -39,6 +39,11 @@ class AppStrings {
   static const String faceRecognitionTitle = 'Identificación facial';
   static const String faceRecognitionDescription =
       'Añade el reconocimiento facial para que tu cuenta sea más segura.';
+  static const String faceRecognitionLoading = 'Verificando tu rostro...';
+  static const String faceRecognitionPercentage = '100%';
+  static const String dialogCongratulationTitle = '¡Felicidades!';
+  static const String dialogRecognitionDescription =
+      "Su cuenta está lista para usarse. Será redirigido a la página de inicio en unos segundos.";
   static const String setLocation = 'Ubicación';
   static const String setLocationHint = 'Seleccione una ubicación en el mapa';
   static const String emailLabel = 'Correo electrónico';

@@ -33,7 +33,7 @@ class _FaceOverlayState extends State<FaceOverlay>
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: controller,
-      builder: (_, __) {
+      builder: (_, _) {
         return CustomPaint(
           painter: FaceOverlayPainter(progress: controller.value),
           size: Size.infinite,
@@ -60,7 +60,7 @@ class FaceOverlayPainter extends CustomPainter {
     final glow = 0.6 + 0.4 * sin(progress * 2 * pi);
 
     final paint = Paint()
-      ..color = AppColors.primary.withOpacity(glow)
+      ..color = AppColors.primary.withValues(alpha: glow)
       ..strokeWidth = 4
       ..style = PaintingStyle.stroke;
 
@@ -101,9 +101,9 @@ class FaceOverlayPainter extends CustomPainter {
 
     final gradient = LinearGradient(
       colors: [
-        AppColors.primary.withOpacity(0),
-        AppColors.primary.withOpacity(0.7),
-        AppColors.primary.withOpacity(0),
+        AppColors.primary.withValues(alpha: 0),
+        AppColors.primary.withValues(alpha: 0.7),
+        AppColors.primary.withValues(alpha: 0),
       ],
       stops: const [0, 0.5, 1],
     );
@@ -136,10 +136,10 @@ class FaceOverlayPainter extends CustomPainter {
       // animación tipo breathing
       final opacity = 0.3 + 0.7 * (0.5 + 0.5 * sin(phase * 2 * pi));
 
-      // ligera escala (esto cambia TODO visualmente)
+      // ligera escala (esto cambia todo visualmente)
       final scale = 0.8 + 0.4 * sin(phase * 2 * pi);
 
-      final paint = Paint()..color = Colors.white.withOpacity(opacity);
+      final paint = Paint()..color = Colors.white.withValues(alpha: opacity);
 
       canvas.drawCircle(basePoints[i], sizes[i] * scale, paint);
     }

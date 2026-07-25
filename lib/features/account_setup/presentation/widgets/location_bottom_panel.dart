@@ -38,7 +38,10 @@ class LocationBottomPanel extends StatelessWidget {
           ),
 
           boxShadow: [
-            BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 10),
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.1),
+              blurRadius: 10,
+            ),
           ],
         ),
 

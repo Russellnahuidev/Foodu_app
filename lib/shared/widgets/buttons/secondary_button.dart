@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodu_app/app/constants/dimensions.dart';
 import 'package:foodu_app/app/themes/app_colors.dart';
-import 'package:foodu_app/app/themes/text_styles.dart';
 
 class SecondaryButton extends StatelessWidget {
   final String label;
@@ -39,8 +38,8 @@ class SecondaryButton extends StatelessWidget {
           backgroundColor:
               backgroundColor ??
               (isDark
-                  ? AppColors.white.withOpacity(0.1)
-                  : AppColors.primary.withOpacity(0.1)),
+                  ? AppColors.white.withValues(alpha: 0.1)
+                  : AppColors.primary.withValues(alpha: 0.1)),
           foregroundColor: textColor ?? AppColors.white,
           disabledBackgroundColor: AppColors.grey300,
           elevation: 0,

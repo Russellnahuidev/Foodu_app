@@ -88,7 +88,7 @@ class _WelcomePageState extends State<WelcomePage> {
                     AppStrings.appTagline,
                     textAlign: TextAlign.center,
                     style: AppTextStyles.bodyLarge.copyWith(
-                      color: AppColors.white.withOpacity(0.9),
+                      color: AppColors.white.withValues(alpha: 0.9),
                       height: 1.4,
                     ),
                   ),

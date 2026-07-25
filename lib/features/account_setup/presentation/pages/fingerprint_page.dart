@@ -25,65 +25,79 @@ class _FingerprintPageState extends State<FingerprintPage> {
           style: Theme.of(context).textTheme.headlineSmall,
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_new),
+          icon: const Icon(Icons.arrow_back_ios_new),
           onPressed: () => context.pop(),
         ),
       ),
       body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(AppDimensions.space),
-          child: Column(
-            children: [
-              SizedBox(height: AppDimensions.space64),
-              // Descripcion
-              Text(
-                AppStrings.fingerprintDescription,
-                style: Theme.of(context).textTheme.bodyLarge,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: AppDimensions.space64),
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            return SingleChildScrollView(
+              padding: EdgeInsets.symmetric(horizontal: AppDimensions.space),
+              child: ConstrainedBox(
+                constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                child: IntrinsicHeight(
+                  child: Column(
+                    children: [
+                      const Spacer(flex: 1),
 
-              /// Fingerprint Icon
-              const BiometricIcon(icon: Icons.fingerprint),
+                      SizedBox(height: AppDimensions.space),
+                      // Descripcion
+                      Text(
+                        AppStrings.fingerprintDescription,
+                        style: Theme.of(context).textTheme.bodyLarge,
+                        textAlign: TextAlign.center,
+                      ),
 
-              SizedBox(height: AppDimensions.space64),
+                      /// Fingerprint Icon
+                      const Spacer(flex: 2),
 
-              /// Instruction Text
-              Text(
-                AppStrings.fingerprintInstruction,
-                style: Theme.of(context).textTheme.bodyMedium,
-                textAlign: TextAlign.center,
-              ),
+                      const BiometricIcon(icon: Icons.fingerprint),
 
-              SizedBox(height: AppDimensions.space64),
+                      const Spacer(flex: 2),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  // Skip Button
-                  Expanded(
-                    child: SecondaryButton(
-                      label: AppStrings.skipButton,
-                      onPressed: () {
-                        // Skip biometric
-                      },
-                    ),
+                      /// Instruction Text
+                      Text(
+                        AppStrings.fingerprintInstruction,
+                        style: Theme.of(context).textTheme.bodyMedium,
+                        textAlign: TextAlign.center,
+                      ),
+
+                      const Spacer(flex: 3),
+
+                      /// Botones de acción
+                      Row(
+                        children: [
+                          // Skip Button
+                          Expanded(
+                            child: SecondaryButton(
+                              label: AppStrings.skipButton,
+                              onPressed: () {
+                                // Skip biometric
+                              },
+                            ),
+                          ),
+                          SizedBox(width: AppDimensions.spaceMD),
+                          // Continue Button
+                          Expanded(
+                            child: PrimaryButton(
+                              label: AppStrings.continueButton,
+                              onPressed: () {
+                                // Navigate to FaceRecognitionPage
+                                context.push(RoutesNames.faceRecognition);
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      SizedBox(height: AppDimensions.space),
+                    ],
                   ),
-                  SizedBox(width: AppDimensions.spaceMD),
-                  // Continue Button
-                  Expanded(
-                    child: PrimaryButton(
-                      label: AppStrings.continueButton,
-                      onPressed: () {
-                        // Navigate to FaceRecognitionPage
-                        context.push(RoutesNames.faceRecognition);
-                      },
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ],
-          ),
+            );
+          },
         ),
       ),
     );
