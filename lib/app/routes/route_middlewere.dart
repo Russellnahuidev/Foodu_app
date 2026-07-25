@@ -14,6 +14,11 @@ class RouteMiddleware {
     RoutesNames.signUp,
     RoutesNames.otpVerification,
     RoutesNames.fillProfile,
+    RoutesNames.setLocation,
+    RoutesNames.createPin,
+    RoutesNames.fingerprint,
+    RoutesNames.faceRecognition,
+    RoutesNames.faceScanning,
   ];
 
   static Future<String?> guard(_, GoRouterState state) async {

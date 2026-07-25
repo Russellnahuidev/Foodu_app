@@ -9,5 +9,10 @@ class RoutesNames {
   static const String signUp = '/sign-up';
   static const String otpVerification = '/otp-verification';
   static const String fillProfile = '/fill-profile';
+  static const String setLocation = '/set-location';
+  static const String createPin = '/create-pin';
+  static const String fingerprint = '/fingerprint';
+  static const String faceRecognition = '/face-recognition';
+  static const String faceScanning = '/face-scanning';
   static const String home = '/home';
 }

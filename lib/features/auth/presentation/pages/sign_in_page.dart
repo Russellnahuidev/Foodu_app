@@ -5,7 +5,7 @@ import 'package:foodu_app/app/routes/routes_names.dart';
 import 'package:foodu_app/app/themes/app_colors.dart';
 import 'package:foodu_app/app/themes/text_styles.dart';
 import 'package:foodu_app/features/auth/presentation/widgets/auth_header_image.dart';
-import 'package:foodu_app/features/auth/presentation/widgets/country_phone_field.dart';
+import 'package:foodu_app/shared/widgets/inputs/app_country_phone_field.dart';
 import 'package:foodu_app/features/auth/presentation/widgets/or_divider.dart';
 import 'package:foodu_app/features/auth/presentation/widgets/remember_me_checkbox.dart';
 import 'package:foodu_app/features/auth/presentation/widgets/social_button.dart';
@@ -64,7 +64,7 @@ class _SignInPageState extends State<SignInPage> {
               SizedBox(height: AppDimensions.spaceXXXL),
 
               // Formulario de numero
-              CountryPhoneField(controller: phoneController),
+              AppCountryPhoneField(controller: phoneController),
 
               SizedBox(height: AppDimensions.spaceXL),
 
@@ -100,23 +100,23 @@ class _SignInPageState extends State<SignInPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SocialButton(
-                    imagePath: 'assets/images/facebook.png',
+                    iconPath: 'assets/icons/facebook_logo.svg',
+                    iconColor: AppColors.facebook,
                     onTap: () {},
                   ),
 
                   SizedBox(width: AppDimensions.space),
 
                   SocialButton(
-                    imagePath: 'assets/images/google.png',
+                    iconPath: 'assets/icons/google_logo.svg',
                     onTap: () {},
                   ),
 
                   SizedBox(width: AppDimensions.space),
 
                   SocialButton(
-                    imagePath: isDark
-                        ? 'assets/images/apple_dark.png'
-                        : 'assets/images/apple.png',
+                    iconPath: 'assets/icons/apple_logo.svg',
+                    iconColor: isDark ? AppColors.white : AppColors.black,
                     onTap: () {},
                   ),
                 ],

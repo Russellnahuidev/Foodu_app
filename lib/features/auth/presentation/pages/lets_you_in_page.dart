@@ -46,7 +46,8 @@ class LetsYouInPage extends StatelessWidget {
               // Botón Facebook
               SocialLoginButton(
                 text: AppStrings.facebookLoginButton,
-                iconPath: 'assets/images/facebook.png',
+                iconPath: 'assets/icons/facebook_logo.svg',
+                iconColor: AppColors.facebook,
                 onTap: () {},
               ),
 
@@ -55,7 +56,7 @@ class LetsYouInPage extends StatelessWidget {
               // Botón Google
               SocialLoginButton(
                 text: AppStrings.googleLoginButton,
-                iconPath: 'assets/images/google.png',
+                iconPath: 'assets/icons/google_logo.svg',
                 onTap: () {},
               ),
 
@@ -64,9 +65,8 @@ class LetsYouInPage extends StatelessWidget {
               // Botón Apple
               SocialLoginButton(
                 text: AppStrings.appleLoginButton,
-                iconPath: isDark
-                    ? 'assets/images/apple_dark.png'
-                    : 'assets/images/apple.png',
+                iconPath: 'assets/icons/apple_logo.svg',
+                iconColor: isDark ? AppColors.white : AppColors.black,
                 onTap: () {},
               ),
 

@@ -133,7 +133,7 @@ class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
                 //Logo animado
                 AnimatedBuilder(
                   animation: _logoController,
-                  builder: (_, __) => FadeTransition(
+                  builder: (_, _) => FadeTransition(
                     opacity: _logoFade,
                     child: ScaleTransition(
                       scale: _logoScale,
@@ -173,7 +173,7 @@ class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
               padding: const EdgeInsets.only(bottom: AppDimensions.space56),
               child: AnimatedBuilder(
                 animation: _loaderController,
-                builder: (_, __) => FadeTransition(
+                builder: (_, _) => FadeTransition(
                   opacity: _loaderFade,
                   child: LoadingAnimationWidget.hexagonDots(
                     color: AppColors.primary,

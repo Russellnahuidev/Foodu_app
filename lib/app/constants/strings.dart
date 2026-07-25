@@ -30,6 +30,22 @@ class AppStrings {
   static const String signUpTitle = 'Crear Nueva Cuenta';
   static const String signOutTitle = 'Cerrar sesión';
   static const String otpVerificationTitle = 'Verificación del código OTP';
+  static const String fillProfileTitle = 'Completa tu perfil';
+  static const String setLocationTitle = 'Selecciona tu ubicación';
+  static const String createPinTitle = 'Crear nuevo PIN';
+  static const String createPinDescription =
+      'Añade un número PIN para que tu cuenta sea más segura.';
+  static const String fingerprintTitle = 'Establece tu huella digital';
+  static const String faceRecognitionTitle = 'Identificación facial';
+  static const String faceRecognitionDescription =
+      'Añade el reconocimiento facial para que tu cuenta sea más segura.';
+  static const String faceRecognitionLoading = 'Verificando tu rostro...';
+  static const String faceRecognitionPercentage = '100%';
+  static const String dialogCongratulationTitle = '¡Felicidades!';
+  static const String dialogRecognitionDescription =
+      "Su cuenta está lista para usarse. Será redirigido a la página de inicio en unos segundos.";
+  static const String setLocation = 'Ubicación';
+  static const String setLocationHint = 'Seleccione una ubicación en el mapa';
   static const String emailLabel = 'Correo electrónico';
   static const String emailHint = 'Ingrese su correo electrónico';
   static const String passwordLabel = 'Contraseña';
@@ -38,13 +54,25 @@ class AppStrings {
   static const String confirmPasswordHint = 'Confirme su contraseña';
   static const String nameLabel = 'Nombre';
   static const String nameHint = 'Ingrese su nombre';
+  static const String nicknameLabel = 'Apodo';
+  static const String nicknameHint = 'Ingrese su apodo';
   static const String phoneLabel = 'Número de teléfono';
   static const String phoneHint = 'Ingrese su número de teléfono';
+  static const String dobLabel = 'Fecha de nacimiento';
+  static const String dobHint = 'Seleccione su fecha de nacimiento';
+  static const String genderLabel = 'Género';
+  static const String genderHint = 'Seleccione género';
+  static const String genderMale = 'Masculino';
+  static const String genderFemale = 'Femenino';
   static const String otpCodeLabel = 'Código OTP';
   static const String otpCodeHint = 'El código ha sido enviado a';
   static const String resendCode = 'Reenviar código';
   static const String resendCodeIn = 'Reenviar código en ';
   static const String resendCodeInSeconds = ' segundos';
+  static const String fingerprintDescription =
+      'Establece tu huella digital para que tu cuenta sea más segura.';
+  static const String fingerprintInstruction =
+      'Por favor, coloca tu huella digital en el escanador de huella digital para comenzar.';
   static const String or = 'o';
   static const String orContinueWith = 'O continuar con';
   static const String alreadyHaveAnAccount = '¿Ya tienes una cuenta?';
@@ -52,6 +80,8 @@ class AppStrings {
   static const String signInButton = 'Iniciar sesión';
   static const String signUpButton = 'Registrarse';
   static const String otpVerificationButton = 'Verificar';
+  static const String skipButton = 'Saltar';
+  static const String continueButton = 'Continuar';
   static const String rememberMe = 'Recordar sesión';
   static const String signOutButton = 'Cerrar sesión';
   static const String googleLoginButton = 'Iniciar sesión con Google';

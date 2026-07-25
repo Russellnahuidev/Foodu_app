@@ -7,12 +7,16 @@ class SocialLoginButton extends StatelessWidget {
   final String text;
   final String iconPath;
   final VoidCallback onTap;
+  final Color? iconColor;
+  final double? iconSize;
 
   const SocialLoginButton({
     super.key,
     required this.text,
     required this.iconPath,
     required this.onTap,
+    this.iconColor,
+    this.iconSize,
   });
 
   @override
@@ -38,7 +42,11 @@ class SocialLoginButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            AppIcon(path: iconPath),
+            AppIcon(
+              path: iconPath,
+              color: iconColor,
+              size: iconSize ?? AppDimensions.iconSize,
+            ),
 
             const SizedBox(width: AppDimensions.spaceMD),
 

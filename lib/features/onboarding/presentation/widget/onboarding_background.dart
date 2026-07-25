@@ -37,7 +37,7 @@ class _Circle extends StatelessWidget {
         width: size,
         height: size,
         decoration: BoxDecoration(
-          color: AppColors.primary.withOpacity(0.08),
+          color: AppColors.primary.withValues(alpha: 0.08),
           shape: BoxShape.circle,
         ),
       ),
