@@ -10,6 +10,7 @@ import 'package:foodu_app/features/auth/presentation/pages/lets_you_in_page.dart
 import 'package:foodu_app/features/auth/presentation/pages/otp_verification_page.dart';
 import 'package:foodu_app/features/auth/presentation/pages/sign_in_page.dart';
 import 'package:foodu_app/features/auth/presentation/pages/sign_up_page.dart';
+import 'package:foodu_app/features/home/presentation/pages/home_page.dart';
 import 'package:foodu_app/features/onboarding/presentation/pages/onboarding_page.dart';
 import 'package:foodu_app/features/onboarding/presentation/pages/welcome_page.dart';
 import 'package:foodu_app/features/splash/presentation/pages/splash_page.dart';
@@ -76,6 +77,7 @@ class AppRouter {
         path: RoutesNames.faceScanning,
         builder: (context, state) => FaceScanningPage(),
       ),
+      GoRoute(path: RoutesNames.home, builder: (context, state) => HomePage()),
     ],
     errorBuilder: (context, state) => Scaffold(
       body: Center(child: Text('Ruta no encontrada: ${state.error}')),

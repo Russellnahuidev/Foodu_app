@@ -6,8 +6,6 @@ import 'package:foodu_app/app/themes/app_colors.dart';
 import 'package:foodu_app/app/themes/text_styles.dart';
 import 'package:foodu_app/core/storage/local_storage.dart';
 import 'package:go_router/go_router.dart';
-//import 'package:foodu_app/features/auth/presentation/pages/lets_you_in_page.dart';
-//import 'package:foodu_app/features/onboarding/presentation/pages/welcome_page.dart';
 import 'package:foodu_app/features/splash/presentation/widgets/splash_logo.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 

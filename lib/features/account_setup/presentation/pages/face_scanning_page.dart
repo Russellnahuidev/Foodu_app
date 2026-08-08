@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodu_app/app/constants/dimensions.dart';
 import 'package:foodu_app/app/constants/strings.dart';
+import 'package:foodu_app/app/routes/routes_names.dart';
 import 'package:foodu_app/app/themes/app_colors.dart';
 import 'package:foodu_app/features/account_setup/presentation/widgets/face_overlay.dart';
 import 'package:foodu_app/shared/widgets/buttons/primary_button.dart';
@@ -35,6 +36,12 @@ class _FaceScanningPageState extends State<FaceScanningPage> {
 
       builder: (_) => const CongratulationsDialog(),
     );
+    // 2. Espera unos segundos y navega al Home
+    Future.delayed(const Duration(seconds: 3), () {
+      if (mounted) {
+        context.go(RoutesNames.home);
+      }
+    });
   }
 
   @override
