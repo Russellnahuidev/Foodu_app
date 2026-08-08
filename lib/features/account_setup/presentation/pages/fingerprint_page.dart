@@ -6,6 +6,7 @@ import 'package:foodu_app/features/account_setup/presentation/widgets/biometric_
 import 'package:foodu_app/shared/widgets/buttons/primary_button.dart';
 import 'package:foodu_app/shared/widgets/buttons/secondary_button.dart';
 import 'package:go_router/go_router.dart';
+import 'package:phosphor_icons/phosphor_icons.dart';
 
 class FingerprintPage extends StatefulWidget {
   const FingerprintPage({super.key});
@@ -52,7 +53,7 @@ class _FingerprintPageState extends State<FingerprintPage> {
                       /// Fingerprint Icon
                       const Spacer(flex: 2),
 
-                      const BiometricIcon(icon: Icons.fingerprint),
+                      BiometricIcon(icon: PhosphorIcons.fingerprint()),
 
                       const Spacer(flex: 2),
 

@@ -19,6 +19,7 @@ class RouteMiddleware {
     RoutesNames.fingerprint,
     RoutesNames.faceRecognition,
     RoutesNames.faceScanning,
+    RoutesNames.home,
   ];
 
   static Future<String?> guard(_, GoRouterState state) async {
